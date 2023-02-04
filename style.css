@@ -1,0 +1,76 @@
+
+header{
+    text-align: center;
+    width: 100%;
+    height: 150px;
+    background-color: rgb(10, 105, 76);
+    color: white;
+    padding-top: 5px;
+}
+
+div{
+    margin-bottom: 2px;
+    padding: 10px;
+}
+
+#search-bar {
+    padding: 10px;
+    
+}
+#form{
+    text-align: center;
+}
+
+#query{
+    width: 70%;
+    height: 30px;
+}
+#search-btn {
+    width: 20%;
+    background-color: rgb(26, 114, 110);
+    color: white;
+    height: 30px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+.left{
+    height: 500px;
+    width: 30%;
+    float: left;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    background-color: rgb(130, 117, 99);
+}
+
+.right {
+    height: 500px;
+    width: 65%;
+    float: right;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    background-color: rgb(130, 117, 99);
+}
+
+#list-nearby-trails{
+    border: 1px solid white;
+    height: 62%;
+    background-color: rgb(186, 216, 221);
+}
+#map-nearby-trails{
+    border: 1px solid rgb(255, 255, 255);
+    height: 30%;
+    width: 50%;
+    margin: auto;
+    background-color: rgb(186, 216, 221);
+    
+}
+
+footer{
+    text-align: center;
+    width: 100%;
+    height: 100px;
+    padding-top: 10px;
+    background-color: rgb(10, 105, 76);
+    color: white;
+    clear: both;
+    line-height: 0px;
+
+}
