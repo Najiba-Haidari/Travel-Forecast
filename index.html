@@ -6,41 +6,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <title>Hiking Forecast</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <header>
-        <h1>The Best Hiking Forecast</h1>
-        <p>Add the Description Here!</p>
+
+    <header class="bg-green-900 text-3xl text-center text-white " >
+        <h1 >The Best Hiking Forecast</h1>
+        <p class="text-lg ">Find trails nearby, no matter where you are!
+            Type the Zip Code in and Go!
+        </p>
+
+
     </header>
     <main>
 
-        <div id="search-bar">
-            <form id="form">
-                <input type="search" id="query" name="search" placeholder="Enter your Zip Code .....">
-                <button id="search-btn">Search</button> 
+        <div class="relative container mx-auto p-6 text-lg text-center" id="search-bar">
+            <form  id="form">
+                <input  class="rounded-full text-center" type="search" id="query" name="search" placeholder="Enter your Zip Code .....">
+                <button class="hover:bg-red-600 p-3 px-6 pt-2 text-white bg-green-900 rounded-full" id="search-btn">Search</button> 
             </form>
         </div>
 
-        <div id="towns-weather" class="left">
-            <p>Towns Weather</p>
+        <div id="towns-weather" class="container justify-center flex-col mx-auto">
+            <h1 class="bg-green-900 text-white text-center">Towns Weather</h1>
+            <img class="h-1/3" src="https://media.istockphoto.com/id/1191087715/photo/weather-forecast-interface.jpg?s=1024x1024&w=is&k=20&c=piIlmwf4QG_0Ubp12UVQJRgULqXF1ZwfdOUZsA_1-ww=">
         </div>
 
-        <div id="nearby-trails" class="right">
-            <div id="list-nearby-trails">
-                <p>List of Nearby Trails</p>
+        <section id="nearby-trails" class="right">
+            <div class="container flex flex-col-reverse md:flex-row items-center px-6 mx-auto mt-10 space-y-0 md:space-y-0" id="list-nearby-trails">
+                 <!--Left Item-->
+                <div class="flex flex-col p-2 md:w-1/2">
+                    <h1 class="bg-green-900 text-white text-center">List of Nearby Trails</h1>
+                    <img src="https://media.istockphoto.com/id/1189064346/photo/city-map-with-pin-pointers-3d-rendering-image.jpg?s=1024x1024&w=is&k=20&c=-3POKT2aEewXDl6xt1jppyucu2rnu_RNNXSIolTDzlo=">
+                </div>
+                <!--Right Item-->
+                <div class ="md:w-1/2 p-2" id="map-nearby-trails">
+                    <h1 class="bg-green-900 text-white text-center">Map of Nearby Trails</h1>
+                    <img src="https://media.istockphoto.com/id/1189064346/photo/city-map-with-pin-pointers-3d-rendering-image.jpg?s=1024x1024&w=is&k=20&c=-3POKT2aEewXDl6xt1jppyucu2rnu_RNNXSIolTDzlo=">
+                
             </div>
-            <div id="map-nearby-trails">
-                <p>Map of Nearby Trails</p>
-            </div>
-        </div>
+        </section>
     </main>
 
-    <footer id="footer">
+    <footer class="bg-green-900 text-center text-lg text-white mx-auto flex md:space-y-0 flex-col" id="footer">
         <h4>Super Dooper Team</h4>
         <h5>Hiking Forecast App</h5>
         <p> &copy; Super Dooper Team @ 2023</p>
     </footer>
     
-    <script src="./script.js"></script>
+    <script src="./tailwind.config.js"></script>
 </body>
 </html>
