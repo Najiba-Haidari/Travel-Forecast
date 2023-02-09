@@ -16,12 +16,13 @@
             Type in the City and Go!
         </p>
 
+
     </header>
     <main>
 
         <div class="relative container mx-auto p-6 text-lg text-center" id="search-bar">
             <form  id="form">
-                <input  class="rounded-full text-center" type="search" id="query" name="search" placeholder="Enter your Zip Code .....">
+                <input  class="rounded-full text-center" type="search" id="query" name="search" placeholder="Enter your city...">
                 <button class="hover:bg-red-600 p-3 px-6 pt-2 text-white bg-green-900 rounded-full" id="search-btn">Search</button> 
             </form>
         </div>
@@ -91,7 +92,7 @@
                     <img src="https://media.istockphoto.com/id/1189064346/photo/city-map-with-pin-pointers-3d-rendering-image.jpg?s=1024x1024&w=is&k=20&c=-3POKT2aEewXDl6xt1jppyucu2rnu_RNNXSIolTDzlo=">
                 </div>
                 <!--Right Item-->
-                <div class ="md:w-1/2 p-2" id="map-nearby-trails">
+                <div class ="md:w-1/2 p-2" id="map">
                     <h1 class="bg-green-900 text-white text-center">Map of Nearby Trails</h1>
                     <img src="https://media.istockphoto.com/id/1189064346/photo/city-map-with-pin-pointers-3d-rendering-image.jpg?s=1024x1024&w=is&k=20&c=-3POKT2aEewXDl6xt1jppyucu2rnu_RNNXSIolTDzlo=">
                 
@@ -104,7 +105,10 @@
         <h5>Hiking Forecast App</h5>
         <p> &copy; Super Dooper Team @ 2023</p>
     </footer>
-    
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+      defer
+    ></script>
     <script src="./script.js"></script>
 </body>
 </html>
