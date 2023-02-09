@@ -13,7 +13,7 @@
     <header class="bg-green-900 text-3xl text-center text-white " >
         <h1 >The Best Hiking Forecast</h1>
         <p class="text-lg ">Find trails nearby, no matter where you are!
-            Type the Zip Code in and Go!
+            Type in the City and Go!
         </p>
 
     </header>
@@ -28,7 +28,59 @@
 
         <div id="towns-weather" class="container justify-center flex-col mx-auto">
             <h1 class="bg-green-900 text-white text-center">Towns Weather</h1>
-            <img class="h-1/3" src="https://media.istockphoto.com/id/1191087715/photo/weather-forecast-interface.jpg?s=1024x1024&w=is&k=20&c=piIlmwf4QG_0Ubp12UVQJRgULqXF1ZwfdOUZsA_1-ww=">
+            <div id="weather-card" 
+            class="flex 
+            flex-row 
+            mx-auto 
+            top: 50%;
+            left: 51%;
+            margin-right: -50%;
+            transform: translate(-50%,-50%);
+            height: 375px;
+            width:1300px;">
+            <div id="icons-container">
+                <div class="icons" >
+                    <p class="weather" id="day1"></p>
+                    <div class="image"><img src="https://images.pexels.com/photos/1205650/pexels-photo-1205650.jpeg?auto=compress&cs=tinysrgb&w=400" class="imgC" id="img1" alt=""></div>
+                     <p class="minValues" id="day1Mn">Loading...</p>
+                     <p class="maxValues" id="day1Mx">Loading...</p>
+                     <p class="wind" id="day1W">Loading...</p>
+                     <p class="humidity" id="day1H">Loading...</p>         
+                </div>
+                <div class="icons">
+                    <p class="weather" id="day2"></p>
+                    <div class="image"><img src="https://images.pexels.com/photos/1205650/pexels-photo-1205650.jpeg?auto=compress&cs=tinysrgb&w=400" class="imgC" id="img2" alt=""></div>
+                     <p class="minValues" id="day2Mn">Loading...</p>
+                     <p class="maxValues" id="day2Mx">Loading...</p>
+                     <p class="wind" id="day2W">Loading...</p>
+                     <p class="humidity" id="day2H">Loading...</p>         
+                </div>
+                <div class="icons">
+                    <p class="weather" id="day3"></p>
+                    <div class="image"><img src="https://images.pexels.com/photos/1205650/pexels-photo-1205650.jpeg?auto=compress&cs=tinysrgb&w=400" class="imgC" id="img3" alt=""></div>
+                     <p class="minValues" id="day3Mn">Loading...</p>
+                     <p class="maxValues" id="day3Mx">Loading...</p>
+                     <p class="wind" id="day3W">Loading...</p>
+                     <p class="humidity" id="day3H">Loading...</p>         
+                </div>
+                <div class="icons">
+                    <p class="weather" id="day4"></p>
+                    <div class="image"><img src="https://images.pexels.com/photos/1205650/pexels-photo-1205650.jpeg?auto=compress&cs=tinysrgb&w=400" class="imgC" id="img4" alt=""></div>
+                     <p class="minValues" id="day4Mn">Loading...</p>
+                     <p class="maxValues" id="day4Mx">Loading...</p>
+                     <p class="wind" id="day4W">Loading...</p>
+                     <p class="humidity" id="day4H">Loading...</p>         
+                </div>
+                <div class="icons">
+                    <p class="weather" id="day5"></p>
+                    <div class="image"><img src="https://images.pexels.com/photos/1205650/pexels-photo-1205650.jpeg?auto=compress&cs=tinysrgb&w=400" class="imgC" id="img5" alt=""></div>
+                     <p class="minValues" id="day5Mn">Loading...</p>
+                     <p class="maxValues" id="day5Mx">Loading...</p>
+                     <p class="wind" id="day5W">Loading...</p>
+                     <p class="humidity" id="day5H">Loading...</p>         
+                </div>
+            </div>
+        </div>
         </div>
 
         <section id="nearby-trails" class="right">
@@ -53,6 +105,6 @@
         <p> &copy; Super Dooper Team @ 2023</p>
     </footer>
     
-    <script src="./tailwind.config.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>

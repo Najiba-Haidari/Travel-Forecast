@@ -5,3 +5,82 @@ body{
     background-size: cover;
     background-position: 90% -25%;
 }
+/* #weather-card{
+    position:absolute;
+    top: 50%;
+    left: 51%;
+    margin-right: -50%;
+    transform: translate(-50%,-50%);
+    height: 375px;
+    width:1300px;
+    border: 5px solid;
+    border-radius: 10px;
+    border-color: black;
+    background-color: azure;
+} */
+#icons-Container{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%,-50%);
+    height: 375px;
+    width:1200px;
+    border: 5px solid;
+    border-radius: 10px;
+    border-color: black;
+}
+.icons{
+    display: inline-block;
+    float: left;
+    color:aliceblue;
+    height:350px;
+    width:205px;
+    margin:20px;
+    border: 5px solid;
+    border-radius: 10px;
+    border-color: black;
+    background-color: rgb(16, 83, 38);
+}
+.image{
+    height:140px;
+    width:100%;
+}
+.imgC{
+    height:140px;
+    width: 100%
+}
+.weather{
+    margin:5px;
+    border-radius: 5px;
+    text-align:center;
+    font-weight: bold;
+}
+.minValues{
+    text-align: center;
+    border-radius: 5px;
+    height:30px;
+    width:85px;
+    margin:5px;      
+}
+.maxValues{
+    text-align: center;
+    border-radius: 5px;
+    height:30px;
+    width:100px;
+    margin:5px;     
+}
+.wind{
+    text-align: center;
+    border-radius: 5px;
+    height:30px;
+    width:100px;
+    margin:5px;   
+}
+.humidity{
+    text-align: center;
+    border-radius: 5px;
+    height:30px;
+    width:100px;
+    margin:5px;    
+}
