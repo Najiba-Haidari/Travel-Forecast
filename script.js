@@ -30,7 +30,7 @@ var getGeoLocation = function (searchResult) {
 }
 var getForecast = function (lat, lon) {
 
-    var weatherURL = 'http://api.openweathermap.org/data/2.5/forecast?lat=' + lat + '&lon=' + lon + '&appid=' + key;
+    var weatherURL = 'http://api.openweathermap.org/data/2.5/forecast?lat=' + lat + '&lon=' + lon + '&appid=' + key + "&units=imperial";
     fetch(weatherURL)
         .then(function (response) {
             return response.json();
@@ -45,21 +45,41 @@ var getForecast = function (lat, lon) {
             console.log(humidity)
             var maxTemp = data.list[0].main.temp_max
             console.log(maxTemp)
+            var minTemp = data.list[0].main.temp_min
+            console.log(minTemp)
+            var windSpeed = data.list[0].wind.speed
+            console.log(windSpeed)
+            
 
             for (let index = 0; index < data.list.length; index = index + 8) {
                 humidity = (data.list[index].main.humidity)
-                maxTemp = (data.list[index].main.temp_max)
-                maxTemp = ((maxTemp-273.15)*1.+32).toFixed()
+                maxTemp = (data.list[index].main.temp_max).toFixed(1)
+                minTemp = (data.list[index].main.temp_min).toFixed(1)
+                windSpeed = (data.list[index].wind.speed).toFixed(1)
+                sunrise = (data.city.sunrise)
+                sunset = (data.city.sunset)
 
 
                 console.log(humidity)
                 var containerDiv = document.createElement('div')
                 var humidityEl = document.createElement('p')
                 var maxTempEl = document.createElement('p')
+                var minTempEl = document.createElement('p')
+                var windSpeedEl = document.createElement('p')
+                var sunriseEl = document.createElement('p')
+                var sunsetEl = document.createElement('p')
                 humidityEl.textContent = ("Humidity: " + humidity + '%');
                 maxTempEl.textContent = ('High Temp: ' + maxTemp + '°')
+                minTempEl.textContent = ('Low Temp: ' + minTemp + '°')
+                windSpeedEl.textContent = ('Wind: ' + minTemp + 'MPH')
+                sunriseEl.textContent = ('Sunrise: ' + sunrise)
+                sunsetEl.textContent = ('Sunrise: ' + sunset)
                 containerDiv.append(humidityEl)
                 containerDiv.append(maxTempEl)
+                containerDiv.append(minTempEl)
+                containerDiv.append(windSpeedEl)
+                containerDiv.append(sunriseEl)
+                containerDiv.append(sunsetEl)
                 fiveDayContainer.append(containerDiv)
                 
 
