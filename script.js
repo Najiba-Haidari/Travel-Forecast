@@ -15,11 +15,12 @@ searchBtn.addEventListener('click', function setQuery(e) {
  var searchResult = getLocation.value
  getInfo();
  getGeoLocation(searchResult);
+ 
 
 });
 //Get lat and lon
 var getGeoLocation = function (searchResult) {
- var geoCode = 'http://api.openweathermap.org/geo/1.0/direct?q=' + searchResult + '&appid=' + key;
+ var geoCode = 'https://api.openweathermap.org/geo/1.0/direct?q=' + searchResult + '&appid=' + key;
  fetch(geoCode)
      .then(function (response) {
          return response.json();
@@ -30,11 +31,26 @@ var getGeoLocation = function (searchResult) {
 
          console.log(lat, lon)
          getForecast(lat, lon);
+         getTrails(lat, lon)
+
  
 })
 }
+var getTrails = function (lat, lon){
+    console.log('lat', lat)
+    var trailsUrl = 'https://prescriptiontrails.org/api/filter?by=coord&lat=' + lat + '&lng=' + lon + '&offset=0&count=2'
+    fetch(trailsUrl, {
+        mode: 'no-cors'
+    })
+     .then(function (response) {
+        console.log(response)
+      return response.json();
+     })
+     .then(function (data){
+        console.log(data)
+})}
 var getForecast = function (lat, lon) {
- var weatherURL = 'http://api.openweathermap.org/data/2.5/forecast?lat=' + lat + '&lon=' + lon + '&appid=' + key+'&units=imperial';
+ var weatherURL = 'https://api.openweathermap.org/data/2.5/forecast?lat=' + lat + '&lon=' + lon + '&appid=' + key+'&units=imperial';
  fetch(weatherURL)
      .then(function (response) {
       return response.json();
@@ -60,11 +76,12 @@ var getForecast = function (lat, lon) {
         map = L.map('map').setView([lat, lon], 13);
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
-            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
             }).addTo(map);
            
     
  })
+
 
 }
 //Day 
@@ -82,15 +99,15 @@ function CheckDay(day){
 for(i=0;i<5;i++){
  document.getElementById("day"+(i+1)).innerHTML=weekday[CheckDay(i)];
 }
-const options = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': '30697a497fmsh544d3997e68b17dp1335f7jsncd515ea018b6',
-		'X-RapidAPI-Host': 'restaurants-near-me-usa.p.rapidapi.com'
-	}
-};
+// const options = {
+// 	method: 'GET',
+// 	headers: {
+// 		'X-RapidAPI-Key': '30697a497fmsh544d3997e68b17dp1335f7jsncd515ea018b6',
+// 		'X-RapidAPI-Host': 'restaurants-near-me-usa.p.rapidapi.com'
+// 	}
+// };
 
-fetch('https://restaurants-near-me-usa.p.rapidapi.com/restaurants/location/state/CO/'+getLocation+'/West%20Bloomfield/0', options)
-	.then(response => response.json())
-	.then(response => console.log(response))
-	.catch(err => console.error(err));
+// fetch('https://restaurants-near-me-usa.p.rapidapi.com/restaurants/location/state/CO/'+getLocation+'/West%20Bloomfield/0', options)
+// 	.then(response => response.json())
+// 	.then(response => console.log(response))
+// 	.catch(err => console.error(err));
