@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="./style.css">
     <title>Hiking Forecast</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+    crossorigin=""></script>
 </head>
 <body>
 
@@ -28,7 +34,7 @@
         </div>
 
         <div id="towns-weather" class="container justify-center flex-col mx-auto">
-            <h1 class="bg-green-900 text-white text-center">Towns Weather</h1>
+            <h1 id= "cityName" class="bg-green-900 text-white text-center">Towns Weather</h1>
             <div id="weather-card" 
             class="flex 
             flex-row 
@@ -92,7 +98,7 @@
                     <img src="https://media.istockphoto.com/id/1189064346/photo/city-map-with-pin-pointers-3d-rendering-image.jpg?s=1024x1024&w=is&k=20&c=-3POKT2aEewXDl6xt1jppyucu2rnu_RNNXSIolTDzlo=">
                 </div>
                 <!--Right Item-->
-                <div class ="md:w-1/2 p-2" id="map">
+                <div class ="md:w-1/2 p-2 " id="map">
                     <h1 class="bg-green-900 text-white text-center">Map of Nearby Trails</h1>
                     <img src="https://media.istockphoto.com/id/1189064346/photo/city-map-with-pin-pointers-3d-rendering-image.jpg?s=1024x1024&w=is&k=20&c=-3POKT2aEewXDl6xt1jppyucu2rnu_RNNXSIolTDzlo=">
                 
@@ -105,10 +111,7 @@
         <h5>Hiking Forecast App</h5>
         <p> &copy; Super Dooper Team @ 2023</p>
     </footer>
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
-      defer
-    ></script>
+ 
     <script src="./script.js"></script>
 </body>
 </html>

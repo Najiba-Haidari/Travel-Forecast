@@ -32,7 +32,7 @@ body{
 }
 .icons{
     display: inline-block;
-    float: left;
+
     color:aliceblue;
     height:350px;
     width:205px;
@@ -84,3 +84,7 @@ body{
     width:100px;
     margin:5px;    
 }
+#map {
+    height: 100%;
+}
+  
