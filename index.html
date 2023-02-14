@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <title>Hiking Forecast</title>
+    <title>Traveling Forecast</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
@@ -17,8 +17,8 @@
 <body> 
 
     <header class="bg-green-900 text-3xl text-center text-white " >
-        <h1 >The Best Hiking Forecast</h1>
-        <p class="text-lg ">Find trails nearby, no matter where you are!
+        <h1 >The Best Traveling Forecast</h1>
+        <p class="text-lg ">Find activities nearby, no matter where you are!
             Type in the City and Go!
         </p>
 
@@ -48,7 +48,7 @@
             <div id="icons-container">
                 <div class="icons" >
                     <p class="weather" id="day1"></p>
-                    <div class="image"><img src="https://images.pexels.com/photos/1205650/pexels-photo-1205650.jpeg?auto=compress&cs=tinysrgb&w=400" class="imgC" id="img1" alt=""></div>
+                    <div class="image"><img src="./weather-icon.jpeg" class="imgC" id="img1" alt=""></div>
                      <p class="minValues" id="day1Mn">Min Temp:</p>
                      <p class="maxValues" id="day1Mx">Max Temp:</p>
                      <p class="wind" id="day1W">Wind:</p>
@@ -56,7 +56,7 @@
                 </div>
                 <div class="icons">
                     <p class="weather" id="day2"></p>
-                    <div class="image"><img src="https://images.pexels.com/photos/1205650/pexels-photo-1205650.jpeg?auto=compress&cs=tinysrgb&w=400" class="imgC" id="img2" alt=""></div>
+                    <div class="image"><img src="./weather-icon.jpeg" class="imgC" id="img2" alt=""></div>
                      <p class="minValues" id="day2Mn">Min Temp:</p>
                      <p class="maxValues" id="day2Mx">Max Temp:</p>
                      <p class="wind" id="day2W">Wind:</p>
@@ -64,7 +64,7 @@
                 </div>
                 <div class="icons">
                     <p class="weather" id="day3"></p>
-                    <div class="image"><img src="https://images.pexels.com/photos/1205650/pexels-photo-1205650.jpeg?auto=compress&cs=tinysrgb&w=400" class="imgC" id="img3" alt=""></div>
+                    <div class="image"><img src="./weather-icon.jpeg" class="imgC" id="img3" alt=""></div>
                      <p class="minValues" id="day3Mn">Min Temp:</p>
                      <p class="maxValues" id="day3Mx">Max Temp:</p>
                      <p class="wind" id="day3W">Wind:</p>
@@ -72,7 +72,7 @@
                 </div>
                 <div class="icons">
                     <p class="weather" id="day4"></p>
-                    <div class="image"><img src="https://images.pexels.com/photos/1205650/pexels-photo-1205650.jpeg?auto=compress&cs=tinysrgb&w=400" class="imgC" id="img4" alt=""></div>
+                    <div class="image"><img src="./weather-icon.jpeg" class="imgC" id="img4" alt=""></div>
                      <p class="minValues" id="day4Mn">Min Temp:</p>
                      <p class="maxValues" id="day4Mx">Max Temp:</p>
                      <p class="wind" id="day4W">Wind:</p>
@@ -80,7 +80,7 @@
                 </div>
                 <div class="icons">
                     <p class="weather" id="day5"></p>
-                    <div class="image"><img src="https://images.pexels.com/photos/1205650/pexels-photo-1205650.jpeg?auto=compress&cs=tinysrgb&w=400" class="imgC" id="img5" alt=""></div>
+                    <div class="image"><img src="./weather-icon.jpeg" class="imgC" id="img5" alt=""></div>
                      <p class="minValues" id="day5Mn">Min Temp:</p>
                      <p class="maxValues" id="day5Mx">Max Temp:</p>
                      <p class="wind" id="day5W">Wind:</p>
@@ -91,26 +91,27 @@
         </div>
        
         <section id="nearby-trails" class="right">
-            <div class="container flex flex-col-reverse md:flex-row items-center px-6 mx-auto mt-10 space-y-0 md:space-y-0" id="list-nearby-trails">
+            <div class="container flex flex-col-reverse md:flex-row px-6 mx-auto mt-10 space-y-0 md:space-y-0" id="list-nearby-trails">
                  <!--Left Item-->
                 <div class="flex flex-col p-2 md:w-1/2">
                     
-                    <h1 class="bg-green-900 text-white text-center">List of Nearby Trails</h1>
-                    <div id="activity-list"></div>
+                    <h1 class="bg-green-900 text-white text-center">List of Nearby Activities</h1>
+                    <div id="activity-list" ></div>
                     
                 </div>
                 <!--Right Item-->
-                <div class ="md:w-1/2 p-2 " id="map">
-                    <h1 class="bg-green-900 text-white text-center">Map of Nearby Trails</h1>
-                    <img src="https://media.istockphoto.com/id/1189064346/photo/city-map-with-pin-pointers-3d-rendering-image.jpg?s=1024x1024&w=is&k=20&c=-3POKT2aEewXDl6xt1jppyucu2rnu_RNNXSIolTDzlo=">
-                
-            </div>
+                <div class ="md:w-1/2 p-2">
+                    <h1 class="bg-green-900 text-white text-center">Map of City</h1>
+                    <div id="map">
+                        <img  id="stock-image" src="https://media.istockphoto.com/id/1189064346/photo/city-map-with-pin-pointers-3d-rendering-image.jpg?s=1024x1024&w=is&k=20&c=-3POKT2aEewXDl6xt1jppyucu2rnu_RNNXSIolTDzlo=">
+                    </div>
+                </div>
         </section>
     </main>
 
     <footer class="bg-green-900 text-center text-lg text-white mx-auto flex md:space-y-0 flex-col" id="footer">
         <h4>Super Dooper Team</h4>
-        <h5>Hiking Forecast App</h5>
+        <h5>Traveling Forecast App</h5>
         <p> &copy; Super Dooper Team @ 2023</p>
     </footer>
  

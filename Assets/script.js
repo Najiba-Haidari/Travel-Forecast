@@ -30,17 +30,20 @@ var getGeoLocation = function (searchResult) {
         .then(function (data) {
             var lat = data[0].lat
             var lon = data[0].lon
+            var location = {lat, lon}
+            console.log(location)
 
             console.log(lat, lon)
             getForecast(lat, lon);
             getPlaces(lat, lon)
+            localStorage.setItem("location", JSON.stringify(location));
 
 
-        })
-}
+})};
+
 var getPlaces = function (lat, lon) {
-    var sightSeeing = 'https://api.opentripmap.com/0.1/en/places/radius?radius=100000&lon=' + lon + '&lat=' + lat + '&kinds=natural&kinds=historic&format=json&limit=10&apikey=5ae2e3f221c38a28845f05b6284a0697a07383669e117a898520dbe7'
-
+    var sightSeeing = 'https://api.opentripmap.com/0.1/en/places/radius?radius=100000&lon=' + lon + '&lat=' + lat + '&kinds=natural&kinds=historic&format=json&limit=20&apikey=5ae2e3f221c38a28845f05b6284a0697a07383669e117a898520dbe7'
+    activityList.innerHTML = ''
 
     fetch(sightSeeing, {
         mode: 'cors'
@@ -51,7 +54,7 @@ var getPlaces = function (lat, lon) {
         })
         .then(function (data) {
             console.log(data)
-            for (index = 0; index < 20; index++) {
+            for (index = 0; index < 10; index++) {
 
                 var locationName = data[index].name
                 var locationDistance = data[index].dist
@@ -62,7 +65,7 @@ var getPlaces = function (lat, lon) {
                 locationNameEl.textContent = locationName
                 locationListEl.appendChild(locationNameEl)
                 activityList.appendChild(locationListEl)
-                activityList.setAttribute("style", "background: rgb(16, 83, 38); color: white; margin: 20px; height: 300px; width: 300px; ")
+                activityList.setAttribute("style", "background: rgb(16, 83, 38); color: white; height: 350px;")
                 locationNameEl.setAttribute("style", "margin: 5px;")
                 
 
@@ -79,10 +82,10 @@ var getForecast = function (lat, lon) {
         .then(function (data) {
             console.log(data)
             for (i = 0; i < 5; i++) {
-                document.getElementById("day" + (i + 1) + "Mn").innerHTML = "Min: " + Number(data.list[i].main.temp_min).toFixed(2) + "°"
+                document.getElementById("day" + (i + 1) + "Mn").innerHTML = "Min: " + Number(data.list[i].main.temp_min).toFixed(2) + "° F"
             }
             for (i = 0; i < 5; i++) {
-                document.getElementById("day" + (i + 1) + "Mx").innerHTML = "Max: " + Number(data.list[i].main.temp_max).toFixed(2) + "°"
+                document.getElementById("day" + (i + 1) + "Mx").innerHTML = "Max: " + Number(data.list[i].main.temp_max).toFixed(2) + "° F"
             }
             for (i = 0; i < 5; i++) {
                 document.getElementById("day" + (i + 1) + "H").innerHTML = " Humidity: " + Number(data.list[i].main.humidity).toFixed(0) + "%"
@@ -91,16 +94,19 @@ var getForecast = function (lat, lon) {
                 document.getElementById("day" + (i + 1) + "W").innerHTML = "Wind: " + Number(data.list[i].wind.speed).toFixed(0) + " mph"
             }
             for (i = 0; i < 5; i++) {
-                document.getElementById("img" + (i + 1)).src = "http:openweathermap.org/img/wn/" + data.list[i].weather[0].icon + ".png";
+                document.getElementById("img" + (i + 1)).src = "https:openweathermap.org/img/wn/" + data.list[i].weather[0].icon + ".png";
             }
+
+            document.getElementById('stock-image').style.display = 'none';
+
             map && map.remove();
-            map = L.map('map').setView([lat, lon], 13);
+            map = L.map('map').setView([lat, lon], 10);
             L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 maxZoom: 19,
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
             }).addTo(map);
 
-
+          
         })
 
 
