@@ -1,4 +1,3 @@
-
 function getInfo() {
     var newName = document.getElementById("query");
     var cityName = document.getElementById("cityName");
@@ -127,14 +126,14 @@ for (i = 0; i < 5; i++) {
     document.getElementById("day" + (i + 1)).innerHTML = weekday[CheckDay(i)];
 }
 // const options = {
-// 	method: 'GET',
-// 	headers: {
-// 		'X-RapidAPI-Key': '30697a497fmsh544d3997e68b17dp1335f7jsncd515ea018b6',
-// 		'X-RapidAPI-Host': 'restaurants-near-me-usa.p.rapidapi.com'
-// 	}
+//  method: 'GET',
+//  headers: {
+//      'X-RapidAPI-Key': '30697a497fmsh544d3997e68b17dp1335f7jsncd515ea018b6',
+//      'X-RapidAPI-Host': 'restaurants-near-me-usa.p.rapidapi.com'
+//  }
 // };
 
 // fetch('https://restaurants-near-me-usa.p.rapidapi.com/restaurants/location/state/CO/'+getLocation+'/West%20Bloomfield/0', options)
-// 	.then(response => response.json())
-// 	.then(response => console.log(response))
-// 	.catch(err => console.error(err));
+//  .then(response => response.json())
+//  .then(response => console.log(response))
+//  .catch(err => console.error(err));
