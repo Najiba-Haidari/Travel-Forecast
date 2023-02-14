@@ -1,10 +1,10 @@
-
-body{
+body {
     background-image: url("https://images.pexels.com/photos/108942/pexels-photo-108942.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 90% -25%;
 }
+
 /* #weather-card{
     position:absolute;
     top: 50%;
@@ -20,73 +20,89 @@ body{
 } */
 
 
-#icons-Container{
-    position:absolute;
+#icons-Container {
+    position: absolute;
     top: 50%;
     left: 50%;
     margin-right: -50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     height: 375px;
-    width:1200px;
+    width: 1200px;
     border: 5px solid;
     border-radius: 10px;
     border-color: black;
 }
-.icons{
+
+.icons {
     display: inline-block;
 
-    color:aliceblue;
-    height:350px;
-    width:205px;
-    margin:20px;
+    color: aliceblue;
+    height: 350px;
+    width: 205px;
+    margin: 20px;
     border: 5px solid;
     border-radius: 10px;
     border-color: black;
     background-color: rgb(16, 83, 38);
 }
-.image{
-    height:140px;
-    width:100%;
+
+.image {
+    height: 140px;
+    width: 100%;
 }
-.imgC{
-    height:140px;
+
+.imgC {
+    height: 140px;
     width: 100%
 }
-.weather{
-    margin:5px;
+
+.weather {
+    margin: 5px;
     border-radius: 5px;
-    text-align:center;
+    text-align: center;
     font-weight: bold;
 }
-.minValues{
+
+.minValues {
     text-align: center;
     border-radius: 5px;
-    height:30px;
-    width:85px;
-    margin:5px;      
+    height: 30px;
+    width: 100px;
+    margin: 5px;
 }
-.maxValues{
+
+.maxValues {
     text-align: center;
     border-radius: 5px;
-    height:30px;
-    width:100px;
-    margin:5px;     
+    height: 30px;
+    width: 120px;
+    margin: 5px;
 }
-.wind{
+
+.wind {
     text-align: center;
     border-radius: 5px;
-    height:30px;
-    width:100px;
-    margin:5px;   
+    height: 30px;
+    width: 120px;
+    margin: 5px;
 }
-.humidity{
+
+.humidity {
     text-align: center;
     border-radius: 5px;
-    height:30px;
-    width:100px;
-    margin:5px;    
+    height: 30px;
+    width: 120px;
+    margin: 5px;
 }
+
 #map {
     height: 100%;
+    color: white;
+    margin: 20px 0xp;
+    width: 100%;
+
 }
-  
+
+footer {
+    margin-top: 30px;
+}
