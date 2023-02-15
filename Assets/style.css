@@ -96,9 +96,8 @@ body {
 }
 
 #map {
-    height: 100%;
-    color: white;
-    margin: 20px 0xp;
+    height: 90%;
+    margin: 10px;
     width: 100%;
 
 }
