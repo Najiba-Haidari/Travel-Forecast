@@ -36,6 +36,8 @@ var getGeoLocation = function (searchResult) {
             getForecast(lat, lon);
             getPlaces(lat, lon)
             localStorage.setItem("location", JSON.stringify(location));
+            var getLocation = localStorage.getItem('location');
+            console.log(getLocation)
 
 
 })};
@@ -64,7 +66,7 @@ var getPlaces = function (lat, lon) {
                 locationNameEl.textContent = locationName
                 locationListEl.appendChild(locationNameEl)
                 activityList.appendChild(locationListEl)
-                activityList.setAttribute("style", "background: rgb(16, 83, 38); color: white; height: 350px;")
+                activityList.setAttribute("style", "background: rgb(16, 83, 38); color: white; height: 350px; border: 5px solid; border-radius: 10px; border-color: black; margin-top: 10px;")
                 locationNameEl.setAttribute("style", "margin: 5px;")
                 
 
