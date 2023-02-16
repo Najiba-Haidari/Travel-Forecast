@@ -3,7 +3,7 @@
 This is a great application for the word traveler. They can get the weather, a map of the city, and a list of things to do. It is very easy to use, all you need to do is type in the name of the city you are going to and hit submit!
 # Screenshot
 adding the screenshot here!
-![The World Traveler Application](./Assets/screenshot.jpeg)
+![The World Traveler Application](./screenshot.jpeg)
 # User Story
 as an avid traveler
 I want to be able to look up a city and find a map.
