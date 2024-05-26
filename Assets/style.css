@@ -1,8 +1,9 @@
 body {
-    background-image: url("https://images.pexels.com/photos/108942/pexels-photo-108942.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    /* background-image: url(./pexels-photo-209831.webp); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 90% -25%;
+    /* background-color: rgb(183, 188, 188); */
 }
 
 /* #weather-card{
@@ -21,7 +22,11 @@ body {
 
 
 #icons-Container {
-    position: absolute;
+    /* display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center; */
+    /* position: absolute;
     top: 50%;
     left: 50%;
     margin-right: -50%;
@@ -30,20 +35,41 @@ body {
     width: 1200px;
     border: 5px solid;
     border-radius: 10px;
-    border-color: black;
+    border-color: black; */
 }
+.heading{
+    background-color: rgba(56, 61, 60, 0.5);
+font-size: larger;}
+.naving{
+    background-color: rgba(16, 71, 61, 0.5);
+    position: fixed;
+    width: 100%;
+}
+.main{
+    padding-top: 180px;
+}
+.footer{
+    background-color: rgba(16, 71, 61, 0.5);
 
+}
 .icons {
     display: inline-block;
-
-    color: aliceblue;
+    padding: 20px;
+    /* color: aliceblue; */
     height: 350px;
     width: 205px;
-    margin: 20px;
-    border: 5px solid;
+    margin: 0 aut;
+    box-shadow: 10px 5px 5px rgba(65, 63, 63, 0.1);
+
+    /* margin: 20px; */
+    /* border: 5px solid; */
     border-radius: 10px;
-    border-color: black;
-    background-color: rgb(16, 83, 38);
+    background-color: rgba(114, 151, 151, 0.6);
+    /* border-color: black; */
+    /* background-color: rgb(236, 241, 241); */
+}
+.icons:hover{
+    box-shadow: 10px 5px 5px rgba(65, 63, 63, 0.5);
 }
 
 .image {
@@ -63,15 +89,15 @@ body {
     font-weight: bold;
 }
 
-.minValues {
-    text-align: center;
+.minValues, .maxValues, .wind, .humidity {
+    text-align: left;
     border-radius: 5px;
     height: 30px;
-    width: 100px;
-    margin: 5px;
+    width: 100%;
+    margin: 0px;
 }
 
-.maxValues {
+/* .maxValues {
     text-align: center;
     border-radius: 5px;
     height: 30px;
@@ -93,13 +119,12 @@ body {
     height: 30px;
     width: 120px;
     margin: 5px;
-}
+} */
 
 #map {
-    height: 90%;
-    margin: 10px;
-    width: 100%;
-
+    height: 350px; 
+    width: 100%; 
+margin: 0 auto;
 }
 
 footer {

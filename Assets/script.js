@@ -29,7 +29,7 @@ var getGeoLocation = function (searchResult) {
         .then(function (data) {
             var lat = data[0].lat
             var lon = data[0].lon
-            var location = {lat, lon}
+            var location = { lat, lon }
             console.log(location)
 
             console.log(lat, lon)
@@ -40,10 +40,11 @@ var getGeoLocation = function (searchResult) {
             console.log(getLocation)
 
 
-})};
+        })
+};
 
 var getPlaces = function (lat, lon) {
-    var sightSeeing = 'https://api.opentripmap.com/0.1/en/places/radius?radius=100000&lon=' + lon + '&lat=' + lat + '&kinds=natural&kinds=historic&format=json&limit=20&apikey=5ae2e3f221c38a28845f05b6284a0697a07383669e117a898520dbe7'
+    var sightSeeing = 'https://api.opentripmap.com/0.1/en/places/radius?radius=100000&lon=' + lon + '&lat=' + lat + '&kinds=natural&kinds=historic&format=json&limit=10&apikey=5ae2e3f221c38a28845f05b6284a0697a07383669e117a898520dbe7'
     activityList.innerHTML = ''
 
     fetch(sightSeeing, {
@@ -55,7 +56,7 @@ var getPlaces = function (lat, lon) {
         })
         .then(function (data) {
             console.log(data)
-            for (index = 0; index < 10; index++) {
+            for (index = 0; index < data.length; index++) {
 
                 var locationName = data[index].name
                 var locationDistance = data[index].dist
@@ -66,9 +67,9 @@ var getPlaces = function (lat, lon) {
                 locationNameEl.textContent = locationName
                 locationListEl.appendChild(locationNameEl)
                 activityList.appendChild(locationListEl)
-                activityList.setAttribute("style", "background: rgb(16, 83, 38); color: white; height: 350px; border: 5px solid; border-radius: 10px; border-color: black; margin-top: 10px;")
-                locationNameEl.setAttribute("style", "margin: 5px;")
-                
+                activityList.setAttribute("style", " color: white; height: 350px; margin-top: 10px;")
+                locationNameEl.setAttribute("style", "margin: 5px; padding: 2px;background-color: rgba(16, 71, 61, 0.5)")
+
 
             }
 
@@ -95,7 +96,7 @@ var getForecast = function (lat, lon) {
                 document.getElementById("day" + (i + 1) + "W").innerHTML = "Wind: " + Number(data.list[i].wind.speed).toFixed(0) + " mph"
             }
             for (i = 0; i < 5; i++) {
-                document.getElementById("img" + (i + 1)).src = "http:openweathermap.org/img/wn/" + data.list[i].weather[0].icon + ".png";
+                document.getElementById("img" + (i + 1)).src = "https:openweathermap.org/img/wn/" + data.list[i].weather[0].icon + ".png";
             }
 
             document.getElementById('stock-image').style.display = 'none';
@@ -107,7 +108,7 @@ var getForecast = function (lat, lon) {
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
             }).addTo(map);
 
-          
+
         })
 
 
