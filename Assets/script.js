@@ -68,7 +68,7 @@ var getPlaces = function (lat, lon) {
                 locationListEl.appendChild(locationNameEl)
                 activityList.appendChild(locationListEl)
                 activityList.setAttribute("style", " color: white; height: 350px; margin-top: 10px;")
-                locationNameEl.setAttribute("style", "margin: 5px; padding: 2px;background-color: rgba(16, 71, 61, 0.5)")
+                locationNameEl.setAttribute("style", "margin: 5px;background-color: rgba(16, 71, 61, 0.5)")
 
 
             }
