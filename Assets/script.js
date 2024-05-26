@@ -96,7 +96,7 @@ var getForecast = function (lat, lon) {
                 document.getElementById("day" + (i + 1) + "W").innerHTML = "Wind: " + Number(data.list[i].wind.speed).toFixed(0) + " mph"
             }
             for (i = 0; i < 5; i++) {
-                document.getElementById("img" + (i + 1)).src = "https:openweathermap.org/img/wn/" + data.list[i].weather[0].icon + ".png";
+                document.getElementById("img" + (i + 1)).src = "https://openweathermap.org/img/wn/" + data.list[i].weather[0].icon + ".png";
             }
 
             document.getElementById('stock-image').style.display = 'none';
