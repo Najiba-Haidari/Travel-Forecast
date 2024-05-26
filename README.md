@@ -37,8 +37,7 @@ THEN I can see the city map
 - HTML
 
 ## Deployed Link
-
-https://paulddncn.github.io/Travel-Forecast/
+https://najiba-haidari.github.io/Travel-Forecast/
 
 ## Credits @2023
 
